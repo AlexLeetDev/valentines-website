@@ -1,115 +1,143 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Quicksand:wght@400;500;700&display=swap');
+
 /* General Styling */
 body {
-  font-family: 'Lato', sans-serif;
-  background-color: #ffe6e6;
-  color: #333;
-  text-align: center;
-  margin: 0;
-  padding: 20px;
-  position: relative;
-  overflow-x: hidden;
-}
-
-/* Background Images Styling */
-.background-images {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.bg-image {
-  position: absolute;
-  width: 100px;
-  opacity: 0.7;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #ffe6e6;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Main Content Styling */
 .main-content {
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1; /* Bring the content in front of the images */
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 h1 {
-  font-family: 'Playfair Display', serif;
-  color: #ff4d4d;
-  font-size: 2.5em;
+    font-family: 'Dancing Script', cursive; /* Romantic script font for headings */
+    color: #ff4d4d;
+    font-size: 2.5em;
 }
 
 p {
-  font-size: 1.2em;
-  margin: 10px 0;
+    font-size: 1.2em;
+    margin: 10px 0;
 }
 
 span {
-  color: #ff4d4d;
-  font-weight: bold;
+    color: #ff4d4d;
+    font-weight: bold;
 }
 
-/* Footer Styling */
-footer {
-  font-family: 'Playfair Display', serif;
-  background-color: #ffe6e6; /* Matches the page background */
-  color: #ff4d4d; /* Red text and hearts */
-  text-align: center;
-  padding: 8px 0; /* Compact height */
-  position: fixed; /* Keeps footer at the bottom */
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1); /* Light shadow for separation */
-  border-top: 1px solid #ff4d4d; /* Thin red border for definition */
-}
-
-footer p {
-  margin: 2px 0; /* Reduce spacing between lines */
-  font-size: 1em; /* Readable and compact */
-  letter-spacing: 0.3px;
+/* Button Container */
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Space between images and button */
+    margin-top: 20px;
 }
 
 /* Button Styling */
 .button {
-  font-family: 'Dancing Script', cursive;
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  font-size: 1.1em;
-  color: white;
-  background-color: #ff4d4d;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    color: white;
+    background-color: #ff4d4d;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .button:hover {
-  background-color: #e63939;
-  transform: scale(1.05);
+    background-color: #e63939;
+    transform: scale(1.05);
+}
+
+/* Side Images Styling */
+.side-image {
+    width: 100px; /* Default size */
+    height: auto;
+    opacity: 0.8;
+    border-radius: 8px; /* Optional for a softer look */
 }
 
 /* Styling for Randomly Generated Hearts */
 .heart {
-  position: absolute;
-  font-size: 20px;
-  color: #ff4d4d;
-  animation: fadeOut 4s ease forwards;
-  pointer-events: none;
-  z-index: 2;
+    position: fixed; /* Prevents hearts from affecting page layout */
+    font-size: 20px; /* Base size of the heart */
+    color: #ff4d4d; /* Heart color */
+    animation: fadeOut 4s ease forwards; /* Fade out animation */
+    pointer-events: none; /* Prevent interaction with hearts */
+    z-index: 2; /* Ensure hearts are above background images */
+    will-change: transform, opacity; /* Optimizes animations */
 }
 
 /* Animation for Floating and Fading Hearts */
 @keyframes fadeOut {
-  0% {
-      opacity: 1;
-      transform: translateY(0);
-  }
-  100% {
-      opacity: 0;
-      transform: translateY(-50px);
-  }
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Stack images above and below button on mobile */
+        gap: 10px;
+    }
+
+    .side-image {
+        width: 80px; /* Reduce image size for mobile */
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .side-image {
+        width: 70px; /* Reduce size further for small screens */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Reduce title size */
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .button {
+        padding: 10px 18px;
+        font-size: 0.9em;
+    }
 }

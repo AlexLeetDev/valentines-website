@@ -4,14 +4,18 @@ function generateHeart() {
   heart.classList.add('heart'); // Add a class to the heart for styling
   heart.textContent = '❤️'; // Set the heart content
 
-  // Randomize position
-  const randomX = Math.random() * window.innerWidth; // Random horizontal position
-  const randomY = Math.random() * window.innerHeight; // Random vertical position
+  // Ensure hearts stay within viewport boundaries
+  const maxX = window.innerWidth - 30; // Avoid overflow on right edge
+  const maxY = window.innerHeight - 30; // Avoid overflow on bottom edge
+  const randomX = Math.random() * maxX; // Random horizontal position
+  const randomY = Math.random() * maxY; // Random vertical position
+
   heart.style.left = `${randomX}px`;
   heart.style.top = `${randomY}px`;
+  heart.style.position = "fixed"; // Prevents hearts from causing page movement
 
   // Randomize size
-  const randomSize = Math.random() * 2 + 1; // Between 1x and 3x
+  const randomSize = Math.random() * 1.5 + 0.5; // Between 0.5x and 2x for better balance
   heart.style.transform = `scale(${randomSize})`;
 
   // Append the heart to the body
@@ -23,12 +27,20 @@ function generateHeart() {
   }, 4000);
 }
 
-// Trigger random heart generation every 500ms
-setInterval(generateHeart, 500);
+// Limit number of hearts on screen to prevent performance issues
+let heartInterval = setInterval(() => {
+  if (document.querySelectorAll('.heart').length < 20) { // Limit max 20 hearts
+    generateHeart();
+  }
+}, 500);
 
 // Handle "Yes" Button Click
 document.querySelector('.button').addEventListener('click', function (event) {
   event.preventDefault(); // Prevent default link behavior
+
+  // Stop generating hearts after button is clicked
+  clearInterval(heartInterval);
+
   document.body.innerHTML = `
     <h1>Thank You!</h1>
     <p>You just made my day. I’m so glad you said yes! 💖</p>
