@@ -1,54 +1,70 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Quicksand:wght@400;500;700&display=swap');
+/* ============================================================
+   General Body Styling
+============================================================ */
 
-/* General Styling */
 body {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #ffe6e6;
     color: #333;
     text-align: center;
     margin: 0;
     padding: 20px;
     position: relative;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
 }
 
-/* Main Content Styling with Background */
+/* ============================================================
+   Main Content Styling
+============================================================ */
+
 .main-content {
     position: relative;
-    z-index: 1; /* Bring the content in front of the images */
+    z-index: 1;
     max-width: 85%;
     margin: 0 auto;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.8); /* Soft white background */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow to lift text */
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Reduce space above heading */
+/* ============================================================
+   Heading (h1) Styling
+============================================================ */
+
 h1 {
     font-family: 'Dancing Script', cursive;
     color: #ff4d4d;
-    font-size: 2.2em; /* Bigger text */
-    font-weight: 700; /* Make the title bolder */
+    font-size: 2.2em;
+    font-weight: 700;
     margin-top: 10px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Soft text shadow */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Enhance text visibility */
+/* ============================================================
+   Paragraph Styling
+============================================================ */
+
 p {
     font-size: 1.2em;
     margin: 8px 0;
     font-weight: 500;
-    letter-spacing: 0.5px; /* Slight spacing for readability */
+    letter-spacing: 0.5px;
 }
+
+/* ============================================================
+   Special Text Styling (span)
+============================================================ */
 
 span {
     color: #ff4d4d;
     font-weight: bold;
 }
 
-/* Image Row - Aligns Images Between Text and Button */
+/* ============================================================
+   Image Row (Side-by-side Images) Styling
+============================================================ */
+
 .image-row {
     display: flex;
     justify-content: center;
@@ -57,7 +73,10 @@ span {
     margin: 15px 0;
 }
 
-/* Side Images Styling */
+/* ============================================================
+   Side Images Styling
+============================================================ */
+
 .side-image {
     width: 100px;
     min-width: 80px;
@@ -66,7 +85,10 @@ span {
     border-radius: 8px;
 }
 
-/* Button Styling */
+/* ============================================================
+   Button Styling
+============================================================ */
+
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -78,8 +100,8 @@ span {
     cursor: pointer;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 600; /* Make button text bolder */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 
 .button:hover {
@@ -87,7 +109,10 @@ span {
     transform: scale(1.05);
 }
 
-/* Styling for Randomly Generated Hearts */
+/* ============================================================
+   Heart Animation Styling (Floating Hearts)
+============================================================ */
+
 .heart {
     position: fixed;
     font-size: 20px;
@@ -98,7 +123,7 @@ span {
     will-change: transform, opacity;
 }
 
-/* Animation for Floating and Fading Hearts */
+/* Keyframes for Heart Animation */
 @keyframes fadeOut {
     0% {
         opacity: 1;
@@ -110,7 +135,10 @@ span {
     }
 }
 
-/* Responsive Design for Mobile */
+/* ============================================================
+   Responsive Design for Mobile
+============================================================ */
+
 @media (max-width: 768px) {
     .image-row {
         gap: 10px;
@@ -121,41 +149,44 @@ span {
     }
 
     .main-content {
-        padding: 12px; /* Slightly reduce padding for smaller screens */
+        padding: 12px;
     }
 
     h1 {
-        font-size: 2em;
+        font-size: 1.8em;
         margin-top: 5px;
     }
 
     p {
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
     .button {
         padding: 8px 16px;
-        font-size: 1em;
+        font-size: 0.9em;
     }
 }
 
-/* Extra Small Screens */
+/* ============================================================
+   Extra Small Screens (Phones)
+============================================================ */
+
 @media (max-width: 480px) {
     .side-image {
         width: 70px;
     }
 
     h1 {
-        font-size: 1.8em;
+        font-size: 1.6em;
         margin-top: 2px;
     }
 
     p {
-        font-size: 1em;
+        font-size: 0.9em;
     }
 
     .button {
         padding: 6px 12px;
-        font-size: 0.9em;
+        font-size: 0.85em;
     }
 }
