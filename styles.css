@@ -13,24 +13,34 @@ body {
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-/* Main Content Styling */
+/* Main Content Styling with Background */
 .main-content {
     position: relative;
     z-index: 1; /* Bring the content in front of the images */
-    max-width: 90%;
+    max-width: 85%;
     margin: 0 auto;
-    padding: 10px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8); /* Soft white background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow to lift text */
 }
 
+/* Reduce space above heading */
 h1 {
-    font-family: 'Dancing Script', cursive; /* Romantic script font for headings */
+    font-family: 'Dancing Script', cursive;
     color: #ff4d4d;
-    font-size: 2.5em;
+    font-size: 2.2em; /* Bigger text */
+    font-weight: 700; /* Make the title bolder */
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Soft text shadow */
 }
 
+/* Enhance text visibility */
 p {
     font-size: 1.2em;
-    margin: 10px 0;
+    margin: 8px 0;
+    font-weight: 500;
+    letter-spacing: 0.5px; /* Slight spacing for readability */
 }
 
 span {
@@ -41,25 +51,25 @@ span {
 /* Image Row - Aligns Images Between Text and Button */
 .image-row {
     display: flex;
-    justify-content: center; /* Center images */
+    justify-content: center;
     align-items: center;
-    gap: 15px; /* Space between images */
-    margin: 20px 0 15px 0; /* Space above and below */
+    gap: 15px;
+    margin: 15px 0;
 }
 
 /* Side Images Styling */
 .side-image {
-    width: 120px; /* Default size */
-    min-width: 70px; /* Prevents them from shrinking too much */
+    width: 100px;
+    min-width: 80px;
     height: auto;
-    opacity: 0.8;
-    border-radius: 8px; /* Optional rounded corners */
+    opacity: 0.85;
+    border-radius: 8px;
 }
 
 /* Button Styling */
 .button {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 10px 20px;
     font-size: 1.1em;
     color: white;
     background-color: #ff4d4d;
@@ -69,6 +79,7 @@ span {
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
     font-family: 'Quicksand', sans-serif;
+    font-weight: 600; /* Make button text bolder */
 }
 
 .button:hover {
@@ -78,13 +89,13 @@ span {
 
 /* Styling for Randomly Generated Hearts */
 .heart {
-    position: fixed; /* Prevents hearts from affecting page layout */
-    font-size: 20px; /* Base size of the heart */
-    color: #ff4d4d; /* Heart color */
-    animation: fadeOut 4s ease forwards; /* Fade out animation */
-    pointer-events: none; /* Prevent interaction with hearts */
-    z-index: 2; /* Ensure hearts are above background images */
-    will-change: transform, opacity; /* Optimizes animations */
+    position: fixed;
+    font-size: 20px;
+    color: #ff4d4d;
+    animation: fadeOut 4s ease forwards;
+    pointer-events: none;
+    z-index: 2;
+    will-change: transform, opacity;
 }
 
 /* Animation for Floating and Fading Hearts */
@@ -102,15 +113,20 @@ span {
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
     .image-row {
-        gap: 10px; /* Reduce spacing for smaller screens */
+        gap: 10px;
     }
 
     .side-image {
-        width: 90px; /* Make images smaller */
+        width: 80px;
+    }
+
+    .main-content {
+        padding: 12px; /* Slightly reduce padding for smaller screens */
     }
 
     h1 {
-        font-size: 2.2em;
+        font-size: 2em;
+        margin-top: 5px;
     }
 
     p {
@@ -118,7 +134,28 @@ span {
     }
 
     .button {
-        padding: 10px 20px;
+        padding: 8px 16px;
         font-size: 1em;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .side-image {
+        width: 70px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-top: 2px;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .button {
+        padding: 6px 12px;
+        font-size: 0.9em;
     }
 }
