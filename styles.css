@@ -180,21 +180,6 @@ span {
 ============================================================ */
 
 @media (max-width: 480px) {
-    /* Left-align specific paragraphs */
-    .main-content p:not(:last-child):not(.highlight) {
-        text-align: left;
-    }
-
-    /* Keep header and footer centered */
-    h1, footer {
-        text-align: center;
-    }
-
-    /* Ensure "What do you say?" is centered */
-    .main-content p:last-child {
-        text-align: center;
-    }
-
     /* Highlighted text remains left-aligned on small screens */
     .highlight {
         text-align: left;
