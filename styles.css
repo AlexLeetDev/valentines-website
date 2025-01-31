@@ -60,6 +60,15 @@ p.highlight {
 }
 
 /* ============================================================
+   Footer Styling
+============================================================ */
+
+footer p {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove any padding */
+}
+
+/* ============================================================
    Special Text Styling (span)
 ============================================================ */
 
@@ -77,7 +86,7 @@ span {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    margin: 35px 0;
+    margin: 20px 0;
 }
 
 /* ============================================================
@@ -109,7 +118,7 @@ span {
     transition: background-color 0.3s ease, transform 0.2s ease;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .button:hover {
@@ -180,12 +189,10 @@ span {
 ============================================================ */
 
 @media (max-width: 480px) {
-    /* Highlighted text remains left-aligned on small screens */
     .highlight {
         text-align: left;
     }
 
-    /* Adjustments for smaller images and text */
     .side-image {
         width: 70px;
     }
