@@ -187,10 +187,11 @@ span {
     h1 {
         font-size: 1.6em;
         margin-top: 2px;
+        margin-bottom: 15px;
     }
 
     p {
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
 
     .button {
