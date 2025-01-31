@@ -157,6 +157,7 @@ span {
 
     .main-content {
         padding: 12px;
+        max-width: 90%;
     }
 
     h1 {
@@ -180,7 +181,11 @@ span {
 
 @media (max-width: 480px) {
     .side-image {
-        width: 70px;
+        width: 80px;
+    }
+
+    .main-content {
+        max-width: 95%;
     }
 
     h1 {
