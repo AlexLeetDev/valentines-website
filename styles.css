@@ -68,7 +68,7 @@ footer {
     color: #333;  /* Dark text color for contrast */
     padding: 10px 20px;
     text-align: center;
-    font-size: 1em;
+    font-size: 0.9em;
     margin-top: 15px;  /* Adds space between the main content and footer */
 }
 
@@ -78,12 +78,12 @@ footer p {
 }
 
 footer p:first-child {
-    font-size: 1em;
+    font-size: 0.9em;
     color: #ff4d4d;  /* Highlight the first line (Valentine's Day wish) */
 }
 
 footer p:last-child {
-    font-size: 0.9em;  /* Smaller text for the copyright */
+    font-size: 0.85em;  /* Smaller text for the copyright */
     color: #888;  /* Light grey color for the copyright text */
 }
 
@@ -223,12 +223,12 @@ span {
     }
 
     p {
-        font-size: 0.7em;
+        font-size: 0.8em;
         margin-bottom: 15px;
     }
 
     .button {
         padding: 6px 12px;
-        font-size: 0.9em;
+        font-size: 1em;
     }
 }
