@@ -8,7 +8,7 @@ body {
     color: #333;
     text-align: center;
     margin: 0;
-    padding: 20px;
+    padding: 15px;
     position: relative;
     overflow-x: hidden;
 }
@@ -63,9 +63,28 @@ p.highlight {
    Footer Styling
 ============================================================ */
 
+footer {
+    background-color: #ffe6e6;  /* Light pink background */
+    color: #333;  /* Dark text color for contrast */
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 15px;  /* Adds space between the main content and footer */
+}
+
 footer p {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove any padding */
+    margin: 3px 0;  /* Minimal margin for paragraphs */
+    font-weight: 400;
+}
+
+footer p:first-child {
+    font-size: 1em;
+    color: #ff4d4d;  /* Highlight the first line (Valentine's Day wish) */
+}
+
+footer p:last-child {
+    font-size: 0.9em;  /* Smaller text for the copyright */
+    color: #888;  /* Light grey color for the copyright text */
 }
 
 /* ============================================================
@@ -86,7 +105,7 @@ span {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 /* ============================================================
@@ -118,7 +137,7 @@ span {
     transition: background-color 0.3s ease, transform 0.2s ease;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .button:hover {
@@ -200,12 +219,12 @@ span {
     h1 {
         font-size: 1.6em;
         margin-top: 2px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     p {
         font-size: 0.7em;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .button {
