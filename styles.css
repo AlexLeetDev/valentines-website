@@ -47,6 +47,13 @@ h1 {
 
 p {
     font-size: 1.2em;
+    margin: 8px 0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.main-content p {
+    font-size: 1.2em;
     margin-bottom: 20px;
     font-weight: 500;
     letter-spacing: 0.5px;
