@@ -41,11 +41,24 @@ document.querySelector('.button').addEventListener('click', function (event) {
   // Stop generating hearts after button is clicked
   clearInterval(heartInterval);
 
-  document.body.innerHTML = `
-    <h1>Thank You!</h1>
+  // Set the thank you message inside the popup
+  const popupContent = document.querySelector('.popup-content');
+  popupContent.innerHTML = `
+    <h2>Thank You!</h2>
     <p>You just made my day. I’m so glad you said yes! 💖</p>
     <div class="heart-container">
       <span class="heart">❤️</span>
     </div>
+    <a href="#" class="close-button">Close</a>
   `;
+
+  // Show the pop-up modal
+  document.getElementById('popup').style.display = 'flex';
+});
+
+// Close the popup when "Close" button is clicked
+document.addEventListener('click', function (event) {
+  if (event.target.classList.contains('close-button')) {
+    document.getElementById('popup').style.display = 'none'; // Hide the popup
+  }
 });
